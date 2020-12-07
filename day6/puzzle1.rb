@@ -1,4 +1,4 @@
-require '../helpers'
+require './helpers'
 
 groups = ::Helpers.groups_from_file("input.txt")
 total_count = 0
