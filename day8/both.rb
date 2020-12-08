@@ -64,7 +64,7 @@ def puzzle2(program)
     instruction.operation = instruction.operation == "jmp" ? "nop" : "jmp"
 
     acc, idx = execute_program(program)
-    break if idx > program.length
+    break if idx == program.length
 
     instruction.operation = instruction.operation == "jmp" ? "nop" : "jmp"
   end
