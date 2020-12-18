@@ -11,6 +11,9 @@ def perform_cycle(active_cubes)
   diff_points.delete([0,0,0])
   cubes_adjacent_to_active_cubes = Hash.new([])
   active_cubes.each do |active_cube|
+    cubes_adjacent_to_active_cubes[active_cube] = []
+  end
+  active_cubes.each do |active_cube|
     diff_points.each do |diff|
       adjacent_cube = sum_cubes(active_cube, diff)
       if cubes_adjacent_to_active_cubes.has_key?(adjacent_cube)
@@ -43,10 +46,10 @@ def get_active_cubes(filename)
   active_cubes
 end
 
-active_cubes = get_active_cubes("input-test.txt")
+active_cubes = get_active_cubes("input.txt")
 n = 0
 while n < 6
-  active_cubes = perform_cycle(active_cubes)
+  perform_cycle(active_cubes)
   n += 1
 end
 
