@@ -1,4 +1,3 @@
-require "pry"
 require "progress_bar"
 
 def make_move(cups, current_cup)

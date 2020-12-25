@@ -1,5 +1,3 @@
-require "pry"
-
 def make_move(cups, current_cup)
   current_index = cups.index(current_cup)
   picked_up_cups = []
